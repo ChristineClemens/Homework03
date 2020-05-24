@@ -18,9 +18,9 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-var tempPass;
-var myPassword;
-var passLength;
+var tempPass = "";
+var myPassword = "";
+var passLength = "";
 var numbers = "0123456789";
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -36,8 +36,13 @@ function generatePassword() {
   var askUppercase = confirm("Would you like to include uppercase characters?");
     console.log(askUppercase);
       if (askUppercase == true) {
-        tempPass = tempPass + numbers;
+        tempPass = tempPass + askUpperCase;
       }
+  var askLowercase = confirm("Would you like to include lowercase characters?");
+  console.log(askLowercase);
+    if (askLowercase == true) {
+      tempPass = tempPass + askLowerCase;
+    }
   var askNumbers = confirm("Would you like to include numbers?");
     console.log(askNumbers);
       if (askNumbers == true) {
@@ -48,7 +53,7 @@ function generatePassword() {
       if (askSpecialChar == true) {
         tempPass = tempPass + specialChar;
       }
-  for (var i = 0; i <= passLength; i++) {
+  for (var i = 0; i < passLength; i++) {
     myPassword += tempPass[Math.floor(Math.random()*tempPass.length)];
   }
   return myPassword;
