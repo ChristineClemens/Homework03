@@ -36,13 +36,13 @@ function generatePassword() {
   var askUppercase = confirm("Would you like to include uppercase characters?");
     console.log(askUppercase);
       if (askUppercase == true) {
-        tempPass = tempPass + askUpperCase;
+        tempPass = tempPass + uppercase;
       }
   var askLowercase = confirm("Would you like to include lowercase characters?");
-  console.log(askLowercase);
-    if (askLowercase == true) {
-      tempPass = tempPass + askLowerCase;
-    }
+    console.log(askLowercase);
+      if (askLowercase == true) {
+        tempPass = tempPass + lowercase;
+      }
   var askNumbers = confirm("Would you like to include numbers?");
     console.log(askNumbers);
       if (askNumbers == true) {
