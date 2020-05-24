@@ -4,6 +4,7 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+  return myPassword;
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -50,6 +51,5 @@ function generatePassword() {
       }
   for (var i = 0; i == passLength; i++) {
     myPassword = tempPass[Math.floor(Math.random()*tempPass.length)];
-    console.log(myPassword);
   }
 }
