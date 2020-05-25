@@ -7,19 +7,12 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 
-
-
-
-
-var tempPass = "";
-var myPassword = "";
 var passLength = "";
 var numbers = "0123456789";
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -27,6 +20,8 @@ var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var specialChar = "!@#$%^&*()-_=+{}[]|\;:<>?/";
 
 function generatePassword() {
+  var tempPass = "";
+  var myPassword = "";
 
   var askLength = prompt("How many characters would you like your password to be (8-128)?");
     console.log(askLength);
